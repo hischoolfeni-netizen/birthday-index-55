@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Little Birthday Surprise🎀</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe1ed, #fff0f5, #ffd6e7);
+    color: #a83d68;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.screen {
+    display: none;
+    min-height: 100vh;
+    padding: 35px 18px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: appear 0.8s ease;
+}
+
+.screen.active {
+    display: flex;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(32px, 7vw, 52px);
+    color: #e75480;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #e75480;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.9;
+    margin: 12px 0;
+}
+
+.card {
+    background: rgba(255,255,255,0.85);
+    border: 2px solid #ffc4d9;
+    border-radius: 28px;
+    padding: 30px 22px;
+    box-shadow: 0 10px 35px rgba(224, 89, 140, 0.15);
+    width: 100%;
+}
+
+button {
+    background: linear-gradient(135deg, #ff8db5, #ec5d94);
+    color: white;
+    border: none;
+    padding: 14px 27px;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    margin: 15px 5px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px #f5a4c3;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px #ee91b5;
+}
+
+.gift {
+    font-size: 110px;
+    animation: bounce 2s infinite;
+    margin: 20px;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.emoji {
+    font-size: 65px;
+    margin: 15px;
+}
+
+.decor {
+    font-size: 25px;
+    margin: 12px;
+}
+
+.reasons {
+    text-align: left;
+    list-style: none;
+    line-height: 2.8;
+    font-size: 16px;
+}
+
+.reasons li {
+    background: #fff0f6;
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin: 10px 0;
+}
+
+.cake {
+    font-size: 100px;
+    animation: bounce 2s infinite;
+}
+
+.secret-letter {
+    background: #fff5f9;
+    border: 2px dashed #f28caf;
+    border-radius: 20px;
+    padding: 25px;
+    line-height: 2;
+    margin-top: 20px;
+}
+
+.progress {
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #d94e83;
+    font-size: 12px;
+    font-weight: 600;
+    background: #ffffffc9;
+    border-radius: 30px;
+    padding: 8px 17px;
+    z-index: 10;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    pointer-events: none;
+    animation: float 7s linear forwards;
+    z-index: 20;
+}
+
+@keyframes float {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+footer {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #bd6285;
+}
+
+@media(max-width: 480px) {
+    .card {
+        padding: 25px 17px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="progress" id="progress">
+    A little surprise for you 💗
+</div>
+
+<!-- LAYER 1: WELCOME -->
+
+<section class="screen active" id="screen1">
+
+<div class="container">
+
+    <div class="decor">🎀 🌷 🦋 💗</div>
+
+    <div class="card">
+
+        <div class="gift">🎁</div>
+
+        <h1> Nondu🥺!</h1>
+
+        <p>
+            Someone has prepared a little surprise
+            especially for you...
+        </p>
+
+        <p>
+            Are you ready to open your birthday gift? 🥹
+        </p>
+
+        <button onclick="nextScreen(2)">
+            Open Your Gift 💝
+        </button>
+
+    </div>
+
+    <footer>Made with lots of love 💗</footer>
+
+</div>
+</section>
+
+
+<!-- LAYER 2: BIRTHDAY CELEBRATION -->
+
+<section class="screen" id="screen2">
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="emoji">🎂🎀🌸</div>
+
+        <h1>Happy Birthday!!</h1>
+
+        <h2>To My 🥺💗</h2>
+
+        <p>
+            Today is all about YOU!
+	     i wish a many many return of the day.
+	    The day is the most sperious day of the year🥺		
+            
+        </p>
+
+        <p>
+            May your life always be filled with
+            sunshine, laughter, happiness and
+            endless beautiful memories. Make your
+	    dream full fill.
+        </p>
+
+        <div class="decor">💗 🧸 🌷 🦋</div>
+
+        <button onclick="nextScreen(3)">
+            A Little More... 🌸
+        </button>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- LAYER 3: FRIENDSHIP CORNER -->
+
+<section class="screen" id="screen3">
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="emoji">🧸💕</div>
+
+        <h1>Why You're Special</h1>
+
+        <p>
+	 you are my that one friend, who knows me . more then my self.
+	this day is the reason for coming to my life. partner🥺
+        </p>
+
+        <ul class="reasons">
+
+            <li>🌷 Your beautiful heart💝</li>
+
+            <li>🥹 Your smile😘</li>
+
+            <li>✨ Your cute and unique personality😊</li>
+
+            <li>🫶 The happiness you bring to others🕊️</li>
+
+            <li>🎀 The way you make ordinary moments special😻.</li>
+
+            <li>💗 Simply because you're YOU🥀😘</li>
+
+        </ul>
+
+        <p>
+            Never change you are self for anyone, plzzz🥺!
+        </p>
+
+        <button onclick="nextScreen(4)">
+            Make a Birthday Wish🥺 
+        </button>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- LAYER 4: BIRTHDAY WISH -->
+
+<section class="screen" id="screen4">
+
+<div class="container">
+
+    <div class="card">
+
+        <h1> happu birthday, happu birthday to you(nondu) 😻✨</h1>
+
+        <div class="cake">🎂</div>
+
+        <p>
+            Close your eyes, take a deep breath
+            and make the biggest wish in your heart.
+        </p>
+
+        <p>
+            Ready to goooo😫
+        </p>
+
+        <button onclick="blowCandles()" id="candleButton">
+            Blow the Candles! 🕯️
+        </button>
+
+        <div id="wishMessage" style="display:none;">
+
+            <h1>Suuuuu 🎉</h1>
+
+            <div class="emoji">💗🌸🦋</div>
+
+            <p>
+                May all your little dreams come true🥺
+                May you find happiness in the smallest
+                things and may every new day bring
+                something beautiful!
+		In your every good or bad day , i am 
+		allways there for you(any time , any where)😊
+		
+            </p>
+
+            <button onclick="nextScreen(5)">
+                One Last Surprise 💌
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- LAYER 5: SECRET LETTER -->
+
+<section class="screen" id="screen5">
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="emoji">💌🎀</div>
+
+        <h1>A Little Letter For You</h1>
+
+        <div class="secret-letter">
+
+            <h2>Dear Bestie! 🥹💗</h2>
+
+            <p>
+                I just want you to know how special
+                you are.
+            </p>
+
+            <p>
+                Life is full of different people,
+                but some people make it a little
+                more beautiful just by being there.
+                And you're one of those people.
+            </p>
+
+            <p>
+                I hope you never run out of reasons
+                to smile. I hope your dreams come
+                true, your heart stays happy, and
+                you always feel loved and appreciated.
+            </p>
+
+            <p>
+                Keep shining, keep smiling, and
+                never stop being your adorable self!
+            </p>
+
+            <h2>Happy Birthday Once Again!! 🎂</h2>
+
+            <p>
+                Sending you the biggest hug! 🫂
+            </p>
+
+            <h2> Lots of Love,</h2>
+
+            <h2>Someone Who Cares About You 💗</h2>
+	    <h3>sorry🥹 for not wriitting in bangla </h3>
+	     <h4> sorry again🥹 </h4>
+
+        </div>
+
+        <div class="emoji">🌷🦋🎀💗</div>
+
+        <button onclick="celebrate()">
+            Send More Love!! 💕
+        </button>
+
+        <p id="finalMessage" style="display:none;">
+            You're a whole bundle of happiness!
+            Stay blessed, birthday girl! 🥹💗
+        </p>
+
+    </div>
+
+    <footer>
+        Made with love, just for you. 🌸
+        <br>
+        Some gifts are made of love, not money. 💗
+    </footer>
+
+</div>
+</section>
+
+
+<script>
+
+// CHANGE THE NAME HERE
+const friendName = "Nondini";
+
+function nextScreen(number) {
+
+    document.querySelectorAll(".screen").forEach(screen => {
+        screen.classList.remove("active");
+    });
+
+    document.getElementById("screen" + number)
+        .classList.add("active");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+    document.getElementById("progress").textContent =
+        "Layer " + number + " of 5 💗";
+
+    for(let i = 0; i < 12; i++) {
+        setTimeout(createHeart, i * 100);
+    }
+}
+
+
+// Birthday candles
+
+function blowCandles() {
+
+    document.getElementById("wishMessage").style.display = "block";
+
+    document.getElementById("candleButton").style.display = "none";
+
+    for(let i = 0; i < 35; i++) {
+        setTimeout(createHeart, i * 100);
+    }
+}
+
+
+// Final surprise
+
+function celebrate() {
+
+    document.getElementById("finalMessage").style.display = "block";
+
+    for(let i = 0; i < 50; i++) {
+        setTimeout(createHeart, i * 80);
+    }
+
+}
+
+
+// Floating hearts
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    const emojis = [
+        "💗", "💕", "🌸", "🎀",
+        "🦋", "✨", "🌷", "💖"
+    ];
+
+    heart.textContent =
+        emojis[Math.floor(Math.random() * emojis.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 25) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 7000);
+
+}
+
+
+// Little floating decorations
+
+setInterval(createHeart, 2000);
+
+</script>
+
+</body>
+</html>
